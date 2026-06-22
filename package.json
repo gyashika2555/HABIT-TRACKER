@@ -21,6 +21,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "^4.3.1",
     "@vitejs/plugin-react": "^4.3.1",
+    "aceternity-ui": "^0.2.2",
     "tailwindcss": "^4.3.1",
     "vite": "^5.4.1"
   }

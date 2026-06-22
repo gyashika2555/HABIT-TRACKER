@@ -134,7 +134,7 @@ function Confetti({ onDone }) {
     left: Math.random() * 100,
     delay: Math.random() * 250,
     rotate: Math.random() * 360,
-    color: [ "#8B5CF6", "#6366F1", "#22C55E", "#06B6D4", "#FBBF24" ][i % 5],
+    color: ["#8B5CF6", "#6366F1", "#22C55E", "#06B6D4", "#FBBF24"][i % 5],
     drift: (Math.random() - 0.5) * 140,
   })), []);
   useEffect(() => {
@@ -432,11 +432,11 @@ export default function HabitTracker() {
     });
     const avgCompletionRate = habits.length
       ? Math.round(
-          habits.reduce((acc, h) => {
-            const days = Math.max(1, Math.round((new Date() - h.createdAt) / 86400000) + 1);
-            return acc + Math.min(1, calcStreaks(h.completions).total / days);
-          }, 0) / habits.length * 100
-        )
+        habits.reduce((acc, h) => {
+          const days = Math.max(1, Math.round((new Date() - h.createdAt) / 86400000) + 1);
+          return acc + Math.min(1, calcStreaks(h.completions).total / days);
+        }, 0) / habits.length * 100
+      )
       : 0;
     return { totalHabits: habits.length, totalCompletions, bestStreak, currentStreakSum, avgCompletionRate };
   }, [habits]);
